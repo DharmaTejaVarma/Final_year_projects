@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "dataset_name": "TravelSenseAI Meteorological Test Scenarios",
+    "version": "1.0.0",
+    "timestamp": "2026-11-04T12:00:00Z"
+  },
+  "scenarios": [
+    {
+      "id": "weather_clear",
+      "name": "Clear Autumn Day",
+      "temperature_celsius": 26.5,
+      "precipitation_mm": 0.0,
+      "condition": "Mainly clear",
+      "weather_code": 1,
+      "wind_speed_kmh": 11.5,
+      "is_outdoor_favorable": true
+    },
+    {
+      "id": "weather_monsoon",
+      "name": "Monsoon Downpour",
+      "temperature_celsius": 22.0,
+      "precipitation_mm": 45.0,
+      "condition": "Heavy rain showers",
+      "weather_code": 65,
+      "wind_speed_kmh": 28.0,
+      "is_outdoor_favorable": false
+    },
+    {
+      "id": "weather_overcast",
+      "name": "Mild Overcast",
+      "temperature_celsius": 24.0,
+      "precipitation_mm": 1.2,
+      "condition": "Overcast",
+      "weather_code": 3,
+      "wind_speed_kmh": 14.0,
+      "is_outdoor_favorable": true
+    }
+  ]
+}
+

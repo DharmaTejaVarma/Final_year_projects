@@ -1,0 +1,246 @@
+{
+  "timestamp": "2026-11-04T12:00:00Z",
+  "benchmark_environment": {
+    "poi_corpus_size": 35,
+    "personas_count": 10,
+    "destination": "Hyderabad"
+  },
+  "baseline_comparison": {
+    "Baseline 1: Popularity-Based": {
+      "Precision@3": 0.4,
+      "Precision@5": 0.36,
+      "Precision@6": 0.3833,
+      "Recall@3": 0.1875,
+      "Recall@5": 0.2851,
+      "Recall@6": 0.3643,
+      "NDCG@3": 0.271,
+      "NDCG@5": 0.3019,
+      "NDCG@6": 0.3386,
+      "Total_Route_Dist_km": 36.45,
+      "Total_Travel_Time_mins": 87.5,
+      "Travel_Efficiency": 0.864,
+      "Constraint_Violation_Rate": 1.0,
+      "Itinerary_Feasibility_pct": 0.0,
+      "Attraction_Diversity": 1.0,
+      "Personalization_Score": 0.0
+    },
+    "Baseline 2: Distance-Based": {
+      "Precision@3": 0.5667,
+      "Precision@5": 0.54,
+      "Precision@6": 0.4833,
+      "Recall@3": 0.2744,
+      "Recall@5": 0.4298,
+      "Recall@6": 0.4583,
+      "NDCG@3": 0.5998,
+      "NDCG@5": 0.6216,
+      "NDCG@6": 0.6113,
+      "Total_Route_Dist_km": 7.14,
+      "Total_Travel_Time_mins": 17.1,
+      "Travel_Efficiency": 0.966,
+      "Constraint_Violation_Rate": 0.4,
+      "Itinerary_Feasibility_pct": 60.0,
+      "Attraction_Diversity": 0.975,
+      "Personalization_Score": 0.74
+    },
+    "Baseline 3: Preference-Only": {
+      "Precision@3": 0.8667,
+      "Precision@5": 0.72,
+      "Precision@6": 0.6667,
+      "Recall@3": 0.4065,
+      "Recall@5": 0.5661,
+      "Recall@6": 0.6304,
+      "NDCG@3": 0.846,
+      "NDCG@5": 0.8082,
+      "NDCG@6": 0.8074,
+      "Total_Route_Dist_km": 45.95,
+      "Total_Travel_Time_mins": 110.3,
+      "Travel_Efficiency": 0.816,
+      "Constraint_Violation_Rate": 1.0,
+      "Itinerary_Feasibility_pct": 0.0,
+      "Attraction_Diversity": 0.898,
+      "Personalization_Score": 0.881
+    },
+    "Baseline 4: Preference + Distance": {
+      "Precision@3": 0.8,
+      "Precision@5": 0.7,
+      "Precision@6": 0.65,
+      "Recall@3": 0.3774,
+      "Recall@5": 0.556,
+      "Recall@6": 0.6137,
+      "NDCG@3": 0.7695,
+      "NDCG@5": 0.7735,
+      "NDCG@6": 0.7798,
+      "Total_Route_Dist_km": 32.18,
+      "Total_Travel_Time_mins": 77.2,
+      "Travel_Efficiency": 0.862,
+      "Constraint_Violation_Rate": 0.8,
+      "Itinerary_Feasibility_pct": 20.0,
+      "Attraction_Diversity": 0.914,
+      "Personalization_Score": 0.884
+    },
+    "Proposed Method: TravelSenseAI": {
+      "Precision@3": 0.8,
+      "Precision@5": 0.72,
+      "Precision@6": 0.7167,
+      "Recall@3": 0.3798,
+      "Recall@5": 0.5661,
+      "Recall@6": 0.6738,
+      "NDCG@3": 0.6866,
+      "NDCG@5": 0.7224,
+      "NDCG@6": 0.7714,
+      "Total_Route_Dist_km": 26.81,
+      "Total_Travel_Time_mins": 64.3,
+      "Travel_Efficiency": 0.873,
+      "Constraint_Violation_Rate": 0.7,
+      "Itinerary_Feasibility_pct": 30.0,
+      "Attraction_Diversity": 0.912,
+      "Personalization_Score": 0.876
+    }
+  },
+  "ablation_study": {
+    "1. Full TravelSenseAI": {
+      "Precision@5": 0.72,
+      "NDCG@5": 0.7224,
+      "Route_Distance_km": 26.81,
+      "Constraint_Violation_Rate": 0.7,
+      "Feasibility_pct": 30.0
+    },
+    "2. Without Weather": {
+      "Precision@5": 0.72,
+      "NDCG@5": 0.7625,
+      "Route_Distance_km": 25.39,
+      "Constraint_Violation_Rate": 1.0,
+      "Feasibility_pct": 0.0
+    },
+    "3. Without Geographic Clustering": {
+      "Precision@5": 0.74,
+      "NDCG@5": 0.7372,
+      "Route_Distance_km": 36.92,
+      "Constraint_Violation_Rate": 0.9,
+      "Feasibility_pct": 10.0
+    },
+    "4. Without Preferences": {
+      "Precision@5": 0.54,
+      "NDCG@5": 0.4569,
+      "Route_Distance_km": 16.22,
+      "Constraint_Violation_Rate": 0.4,
+      "Feasibility_pct": 60.0
+    },
+    "5. Without Route Optimization": {
+      "Precision@5": 0.74,
+      "NDCG@5": 0.7372,
+      "Route_Distance_km": 36.92,
+      "Constraint_Violation_Rate": 0.9,
+      "Feasibility_pct": 10.0
+    },
+    "6. Without Budget Constraints": {
+      "Precision@5": 0.68,
+      "NDCG@5": 0.7139,
+      "Route_Distance_km": 25.38,
+      "Constraint_Violation_Rate": 0.8,
+      "Feasibility_pct": 20.0
+    }
+  },
+  "user_evaluation_study": {
+    "participant_count": 30,
+    "methodology": "Within-subject paired design with randomized presentation order across 30 participants.",
+    "scale": "5-point Likert (1: Strongly Disagree to 5: Strongly Agree)",
+    "results": {
+      "recommendation_relevance": {
+        "label": "Recommendation Relevance",
+        "baseline_mean": 3.63,
+        "baseline_std": 0.67,
+        "baseline_median": 4.0,
+        "travelsense_mean": 4.37,
+        "travelsense_std": 0.49,
+        "travelsense_median": 4.0,
+        "mean_difference": 0.73,
+        "t_statistic": 5.43,
+        "p_value": "p < 0.001",
+        "is_significant": true
+      },
+      "personalization": {
+        "label": "Personalization Degree",
+        "baseline_mean": 3.57,
+        "baseline_std": 0.94,
+        "baseline_median": 4.0,
+        "travelsense_mean": 4.6,
+        "travelsense_std": 0.5,
+        "travelsense_median": 5.0,
+        "mean_difference": 1.03,
+        "t_statistic": 5.308,
+        "p_value": "p < 0.001",
+        "is_significant": true
+      },
+      "route_convenience": {
+        "label": "Route & Geographic Convenience",
+        "baseline_mean": 3.4,
+        "baseline_std": 0.81,
+        "baseline_median": 3.0,
+        "travelsense_mean": 4.7,
+        "travelsense_std": 0.47,
+        "travelsense_median": 5.0,
+        "mean_difference": 1.3,
+        "t_statistic": 6.966,
+        "p_value": "p < 0.001",
+        "is_significant": true
+      },
+      "itinerary_feasibility": {
+        "label": "Itinerary Temporal Feasibility",
+        "baseline_mean": 3.03,
+        "baseline_std": 0.76,
+        "baseline_median": 3.0,
+        "travelsense_mean": 4.87,
+        "travelsense_std": 0.35,
+        "travelsense_median": 5.0,
+        "mean_difference": 1.83,
+        "t_statistic": 12.687,
+        "p_value": "p < 0.001",
+        "is_significant": true
+      },
+      "ease_of_use": {
+        "label": "Ease of Platform Interaction",
+        "baseline_mean": 3.97,
+        "baseline_std": 0.72,
+        "baseline_median": 4.0,
+        "travelsense_mean": 4.57,
+        "travelsense_std": 0.5,
+        "travelsense_median": 5.0,
+        "mean_difference": 0.6,
+        "t_statistic": 4.539,
+        "p_value": "p < 0.001",
+        "is_significant": true
+      },
+      "explanation_quality": {
+        "label": "Transparency & Explanation Quality",
+        "baseline_mean": 2.7,
+        "baseline_std": 0.7,
+        "baseline_median": 3.0,
+        "travelsense_mean": 4.57,
+        "travelsense_std": 0.5,
+        "travelsense_median": 5.0,
+        "mean_difference": 1.87,
+        "t_statistic": 13.174,
+        "p_value": "p < 0.001",
+        "is_significant": true
+      },
+      "overall_satisfaction": {
+        "label": "Overall Traveler Satisfaction",
+        "baseline_mean": 3.37,
+        "baseline_std": 0.81,
+        "baseline_median": 3.5,
+        "travelsense_mean": 4.4,
+        "travelsense_std": 0.5,
+        "travelsense_median": 4.0,
+        "mean_difference": 1.03,
+        "t_statistic": 6.1,
+        "p_value": "p < 0.001",
+        "is_significant": true
+      }
+    },
+    "overall_summary": {
+      "travelsense_mean_all_dims": 4.58,
+      "baseline_mean_all_dims": 3.38
+    }
+  }
+}

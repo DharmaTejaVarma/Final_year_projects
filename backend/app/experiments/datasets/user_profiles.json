@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "cohort_name": "TravelSenseAI Controlled Benchmark User Cohort",
+    "version": "1.0.0",
+    "timestamp": "2026-11-04T12:00:00Z",
+    "total_personas": 10,
+    "ground_truth_methodology": "Independent multi-expert rubric mapping persona interest profiles, duration feasibility, and budget limits to candidate corpus without model involvement."
+  },
+  "personas": [
+    {
+      "persona_id": "usr_01",
+      "name": "Heritage & Royal Architecture Enthusiast",
+      "interests": ["history", "architecture", "royal", "heritage", "fort"],
+      "budget": 5000.0,
+      "duration_days": 2,
+      "transportation": "driving-car",
+      "pace": "moderate",
+      "daily_hours": 8.0,
+      "start_location": {"latitude": 17.3616, "longitude": 78.4747},
+      "ground_truth_relevant_pois": ["poi_01", "poi_02", "poi_03", "poi_04", "poi_05", "poi_21", "poi_26", "poi_34"],
+      "relevance_grades": {
+        "poi_01": 3, "poi_04": 3, "poi_02": 3, "poi_03": 2, "poi_05": 2, "poi_21": 2, "poi_26": 2, "poi_34": 1
+      }
+    },
+    {
+      "persona_id": "usr_02",
+      "name": "Budget Backpacker & Street Explorer",
+      "interests": ["culture", "bazaars", "street food", "heritage"],
+      "budget": 1500.0,
+      "duration_days": 2,
+      "transportation": "foot-walking",
+      "pace": "packed",
+      "daily_hours": 9.0,
+      "start_location": {"latitude": 17.3616, "longitude": 78.4747},
+      "ground_truth_relevant_pois": ["poi_03", "poi_06", "poi_12", "poi_29", "poi_07", "poi_01"],
+      "relevance_grades": {
+        "poi_03": 3, "poi_12": 3, "poi_29": 3, "poi_06": 2, "poi_07": 2, "poi_01": 1
+      }
+    },
+    {
+      "persona_id": "usr_03",
+      "name": "Family with Young Children",
+      "interests": ["family", "zoo", "science", "recreation", "kids"],
+      "budget": 8000.0,
+      "duration_days": 2,
+      "transportation": "driving-car",
+      "pace": "relaxed",
+      "daily_hours": 7.0,
+      "start_location": {"latitude": 17.4062, "longitude": 78.4691},
+      "ground_truth_relevant_pois": ["poi_09", "poi_10", "poi_14", "poi_15", "poi_22", "poi_08", "poi_13"],
+      "relevance_grades": {
+        "poi_09": 3, "poi_10": 3, "poi_14": 2, "poi_15": 2, "poi_22": 2, "poi_08": 2, "poi_13": 1
+      }
+    },
+    {
+      "persona_id": "usr_04",
+      "name": "Culinary & Foodie Specialist",
+      "interests": ["food", "biryani", "culinary", "bazaar", "chai"],
+      "budget": 4500.0,
+      "duration_days": 2,
+      "transportation": "driving-car",
+      "pace": "moderate",
+      "daily_hours": 8.0,
+      "start_location": {"latitude": 17.3688, "longitude": 78.4741},
+      "ground_truth_relevant_pois": ["poi_29", "poi_30", "poi_31", "poi_12", "poi_03", "poi_04"],
+      "relevance_grades": {
+        "poi_29": 3, "poi_30": 3, "poi_31": 3, "poi_12": 2, "poi_03": 2, "poi_04": 1
+      }
+    },
+    {
+      "persona_id": "usr_05",
+      "name": "Scenic Nature & Peace Seeker",
+      "interests": ["nature", "lakes", "peaceful", "sunset", "scenic"],
+      "budget": 3500.0,
+      "duration_days": 2,
+      "transportation": "driving-car",
+      "pace": "relaxed",
+      "daily_hours": 7.0,
+      "start_location": {"latitude": 17.4239, "longitude": 78.4738},
+      "ground_truth_relevant_pois": ["poi_08", "poi_18", "poi_20", "poi_24", "poi_28", "poi_07", "poi_32"],
+      "relevance_grades": {
+        "poi_08": 3, "poi_18": 3, "poi_20": 2, "poi_24": 2, "poi_28": 2, "poi_07": 1, "poi_32": 1
+      }
+    },
+    {
+      "persona_id": "usr_06",
+      "name": "Art, Museums & Intellectual Traveler",
+      "interests": ["art", "museum", "antiques", "paintings", "culture"],
+      "budget": 4000.0,
+      "duration_days": 2,
+      "transportation": "driving-car",
+      "pace": "moderate",
+      "daily_hours": 8.0,
+      "start_location": {"latitude": 17.3713, "longitude": 78.4804},
+      "ground_truth_relevant_pois": ["poi_05", "poi_16", "poi_17", "poi_33", "poi_10", "poi_04"],
+      "relevance_grades": {
+        "poi_05": 3, "poi_16": 3, "poi_17": 2, "poi_33": 2, "poi_10": 2, "poi_04": 1
+      }
+    },
+    {
+      "persona_id": "usr_07",
+      "name": "Religious & Spiritual Pilgrim",
+      "interests": ["religious", "temple", "mosque", "spiritual", "peaceful"],
+      "budget": 2500.0,
+      "duration_days": 2,
+      "transportation": "driving-car",
+      "pace": "moderate",
+      "daily_hours": 8.0,
+      "start_location": {"latitude": 17.4062, "longitude": 78.4691},
+      "ground_truth_relevant_pois": ["poi_06", "poi_07", "poi_23", "poi_25", "poi_27", "poi_32"],
+      "relevance_grades": {
+        "poi_07": 3, "poi_23": 3, "poi_06": 2, "poi_25": 2, "poi_27": 2, "poi_32": 1
+      }
+    },
+    {
+      "persona_id": "usr_08",
+      "name": "Luxury & Royal Heritage Traveler",
+      "interests": ["luxury", "royal", "palace", "fine dining", "heritage"],
+      "budget": 15000.0,
+      "duration_days": 2,
+      "transportation": "driving-car",
+      "pace": "relaxed",
+      "daily_hours": 7.5,
+      "start_location": {"latitude": 17.3314, "longitude": 78.4674},
+      "ground_truth_relevant_pois": ["poi_11", "poi_04", "poi_01", "poi_05", "poi_18", "poi_35"],
+      "relevance_grades": {
+        "poi_11": 3, "poi_04": 3, "poi_01": 2, "poi_05": 2, "poi_18": 1, "poi_35": 1
+      }
+    },
+    {
+      "persona_id": "usr_09",
+      "name": "Modern Cyberabad & Crafts Explorer",
+      "interests": ["crafts", "modern", "cable bridge", "shopping", "contemporary"],
+      "budget": 6000.0,
+      "duration_days": 2,
+      "transportation": "driving-car",
+      "pace": "moderate",
+      "daily_hours": 8.0,
+      "start_location": {"latitude": 17.4362, "longitude": 78.3872},
+      "ground_truth_relevant_pois": ["poi_18", "poi_19", "poi_17", "poi_35", "poi_20", "poi_08"],
+      "relevance_grades": {
+        "poi_18": 3, "poi_19": 3, "poi_35": 2, "poi_17": 2, "poi_20": 1, "poi_08": 1
+      }
+    },
+    {
+      "persona_id": "usr_10",
+      "name": "Weekend Express Top Highlights Tourist",
+      "interests": ["history", "monument", "lake", "food", "heritage"],
+      "budget": 5000.0,
+      "duration_days": 2,
+      "transportation": "driving-car",
+      "pace": "packed",
+      "daily_hours": 9.0,
+      "start_location": {"latitude": 17.3616, "longitude": 78.4747},
+      "ground_truth_relevant_pois": ["poi_01", "poi_03", "poi_04", "poi_05", "poi_08", "poi_29"],
+      "relevance_grades": {
+        "poi_01": 3, "poi_03": 3, "poi_04": 3, "poi_08": 2, "poi_05": 2, "poi_29": 2
+      }
+    }
+  ]
+}
+

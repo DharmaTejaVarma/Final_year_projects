@@ -1,0 +1,61 @@
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F4F7F6] text-[#26383D] min-h-screen font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[#163B46] tracking-tight font-bold;
+  }
+}
+
+/* Custom Leaflet Map styling in Light Theme */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: #F4F7F6 !important;
+  font-family: inherit;
+  z-index: 10;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: #FFFFFF !important;
+  color: #26383D !important;
+  border: 1px solid #DCE6E3;
+  border-radius: 0.875rem;
+  box-shadow: 0 10px 25px -5px rgba(22, 59, 70, 0.12);
+}
+
+.leaflet-popup-tip {
+  background-color: #FFFFFF !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+
+/* Custom Scrollbars in Light Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F7F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DCE6E3;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #829196;
+}

@@ -1,0 +1,74 @@
+version: "3.8"
+
+services:
+  # ============================================================================
+  # TravelSenseAI — Backend API Service (FastAPI + Uvicorn)
+  # ============================================================================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: travelsenseai-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DEBUG=False
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DATABASE_URL=sqlite:////data/travelsenseai.db
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-travelsenseai_production_secret_key_change_me_9f8e7d}
+      - JWT_ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=1440
+      - GEOAPIFY_API_KEY=${GEOAPIFY_API_KEY:-a212b99a65ea4fb986991545e1df0573}
+      - ORS_API_KEY=${ORS_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - EXTERNAL_API_TIMEOUT_SECONDS=12.0
+      - CACHE_DEFAULT_TTL_SECONDS=3600
+      - CORS_ORIGINS=["http://localhost", "http://localhost:80", "http://localhost:5173", "http://127.0.0.1", "http://127.0.0.1:5173"]
+    volumes:
+      - travelsense_data:/data
+      - travelsense_chroma:/app/chroma_db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - travelsense_network
+
+  # ============================================================================
+  # TravelSenseAI — Frontend Service (React + Vite + Nginx)
+  # ============================================================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: travelsenseai-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost/"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    networks:
+      - travelsense_network
+
+networks:
+  travelsense_network:
+    driver: bridge
+
+volumes:
+  travelsense_data:
+    driver: local
+  travelsense_chroma:
+    driver: local
+
