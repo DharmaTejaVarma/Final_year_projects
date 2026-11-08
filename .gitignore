@@ -35,6 +35,7 @@ env/
 .pytest_cache/
 .coverage
 htmlcov/
+backend/app/reports_storage/*.pdf
 
 # Node & Frontend
 node_modules/
